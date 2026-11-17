@@ -1,0 +1,25 @@
+<section class="page-card">
+ <h2 class="section-heading">Chat AI</h2>
+ <p class="muted">Cerca libri in linguaggio naturale nel catalogo interno e su Open Library</p>
+ <div class="composer">
+    <mat-form-field appearance="outline" class="full-width">
+        <mat-label>La tua richiesta</mat-label>
+        <input matInput [(ngModel)]="message" (keyup.enter)="send()" placeholder="Cerca tutti i libri di Hermann Hesse">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="send()" [disabled]="loading||!message.trim()">
+        <mat-icon>send</mat-icon> Invia
+    </button>
+</div>
+ @if(loading){<p>Sto elaborando la richiesta…</p>} @if(error){<p class="error">{{error}}</p>} @if(notice){<p class="notice">{{notice}}</p>}
+ @if(answer){<div class="answer"><h3>Risposta dell'assistente</h3><p>{{answer}}</p></div>}
+ <div class="results">
+  <section class="panel internal"><h3>Catalogo interno · {{internalBooks.length}}</h3>
+   @for(b of internalBooks;track b.id??b.title){<div class="result"><b>{{b.title}}</b><span>{{b.author}} · {{b.year}}</span></div>}
+   @if(!internalBooks.length){<p>I risultati strutturati appariranno qui quando il backend li restituirà.</p>}
+  </section>
+  <section class="panel external"><h3>Open Library · {{externalBooks.length}}</h3>
+   @for(b of externalBooks;track b.id??b.title){<div class="result"><div><b>{{b.title}}</b><span>{{b.author}} · {{b.year}}</span></div><button mat-stroked-button color="primary" (click)="addExternal(b)"><mat-icon>add</mat-icon>Aggiungi al catalogo</button></div>}
+   @if(!externalBooks.length){<p>I risultati strutturati appariranno qui quando il backend li restituirà.</p>}
+  </section>
+ </div>
+</section>

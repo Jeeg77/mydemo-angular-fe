@@ -1,0 +1,12 @@
+.composer { display:flex; gap:12px; align-items:flex-start; margin-top:18px; }
+.composer button { height:56px; } .answer { margin:12px 0; padding:16px; background:#f8fbff; border:1px solid #dbe6f5; border-radius:12px; }
+.answer h3 { margin:0 0 8px; color:#173b78; } .answer p { white-space:pre-wrap; line-height:1.6; margin:0; }
+.results { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:16px; }
+.panel { border:1px solid #dbe3ed; border-radius:12px; padding:14px; min-width:0; }
+.internal { background:#fbfffc; border-color:#a9dfc4; } .external { background:#fdfbff; border-color:#d4c0f4; }
+.panel h3 { margin:0 0 10px; } .internal h3 { color:#087443; } .external h3 { color:#5b21b6; }
+.result { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px 0; border-top:1px solid #e7edf4; }
+.result span { display:block; color:#64748b; font-size:13px; margin-top:4px; }
+.panel p { color:#64748b; font-size:13px; } .error { color:#b42318; } .notice { color:#087443; }
+@media(max-width:850px){.results{grid-template-columns:1fr}}
+@media(max-width:600px){.composer{flex-direction:column}.composer button{width:100%}.result{align-items:flex-start;flex-direction:column}}

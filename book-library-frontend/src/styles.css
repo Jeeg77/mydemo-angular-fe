@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+html, body { height:100%; margin:0; font-family:Inter,Roboto,sans-serif; background:#f3f6fb; color:#17233d; }
+* { box-sizing:border-box; }
+.page-card { background:#fff; border:1px solid #e1e8f2; border-radius:16px; padding:22px; box-shadow:0 4px 18px #1a31560b; }
+.section-heading { margin:0 0 5px; font-size:22px; color:#12336c; }
+.muted { color:#64748b; }

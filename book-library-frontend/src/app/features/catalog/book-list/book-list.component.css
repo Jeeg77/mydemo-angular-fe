@@ -1,0 +1,16 @@
+.heading { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+.heading p { margin:0 0 16px; }
+.search { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin:14px 0; }
+.query { width:min(320px,100%); }
+.tablewrap { overflow-x:auto; border:1px solid #e2e8f0; border-radius:10px; }
+table { width:100%; }
+th { background:#edf3fb; color:#243b61; font-weight:700; }
+td,th { padding:12px 14px; }
+.rowactions { display:flex; gap:8px; }
+.formbox { margin:16px 0; padding:16px; border:1px solid #cbdcf3; border-radius:12px; background:#f8fbff; }
+.formbox h3 { margin:0 0 12px; }
+.fields { display:grid; grid-template-columns:2fr 2fr 1fr; gap:10px; }
+.fields mat-form-field { width:100%; }
+.actions { display:flex; justify-content:flex-end; gap:8px; }
+.error { color:#b42318; } .notice { color:#087443; } .empty { padding:14px; color:#64748b; }
+@media(max-width:700px){.heading{align-items:flex-start;flex-direction:column}.fields{grid-template-columns:1fr}}
